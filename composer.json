@@ -1,0 +1,29 @@
+{
+    "name": "hachirobei/npp-rabbitmq-publisher",
+    "description": "A Laravel package for RabbitMQ integration",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0",
+        "php-amqplib/php-amqplib": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^9.0",
+        "orchestra/testbench": "^6.38"
+    },
+    "autoload": {
+        "psr-4": {
+            "hachirobei\\NPPRabbitMQPublisher\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "hachirobei\\NPPRabbitMQPublisher\\RabbitMQServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
