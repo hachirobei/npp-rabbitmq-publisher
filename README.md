@@ -33,6 +33,26 @@ RABBITMQ_PORT=5672
 RABBITMQ_USER=your-username
 RABBITMQ_PASSWORD=your-password
 
+
+To ensure the Laravel RabbitMQ package works correctly, your PHP environment must meet the following requirements:
+
+PHP Sockets Extension: This extension is necessary for network communication with RabbitMQ. To enable it, ensure the following line is present and uncommented in your php.ini file:
+
+makefile
+Copy code
+extension=sockets
+If you're unsure whether this extension is enabled, create a PHP file with <?php phpinfo(); ?> and access it through your web server to check your PHP configuration.
+
+PHP BCMath Extension: Required for precise floating-point arithmetic operations. To enable it, ensure this line is in your php.ini file:
+
+makefile
+Copy code
+extension=bcmath
+You can verify if it's enabled through the phpinfo() output as well.
+
+After making any changes to php.ini, remember to restart your web server for the changes to take effect.
+
+
 Usage
 
 Here is a basic example of how to use the package:
@@ -49,3 +69,4 @@ Make sure to replace $message and $queueName with your actual message and queue 
 Contributing
 
 Contributions to the package are welcome! Please feel free to submit pull requests or create issues for bugs and feature requests.
+
