@@ -6,6 +6,11 @@ use Illuminate\Support\ServiceProvider;
 
 class RabbitMQServiceProvider extends ServiceProvider {
     public function register() {
+
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/rabbitmq.php', 'rabbitmq'
+        );
+        
         $this->app->singleton('rabbitmq', function ($app) {
             return new RabbitMQService(config('rabbitmq'));
         });
