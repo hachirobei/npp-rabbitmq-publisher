@@ -1,6 +1,6 @@
 <?php
 
-namespace hachirobei\LaravelRabbitMQ;
+namespace hachirobei\NPPRabbitMQPublisher;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;

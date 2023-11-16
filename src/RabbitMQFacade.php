@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendorName\LaravelRabbitMQ;
+namespace hachirobei\NPPRabbitMQPublisher;
 
 use Illuminate\Support\Facades\Facade;
 

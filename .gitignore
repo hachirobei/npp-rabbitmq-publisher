@@ -1,0 +1,5 @@
+tests/
+phpunit.xml
+vendor/
+composer.lock
+composer.json-test
